@@ -11,4 +11,8 @@ jobs:
         run: |
           echo "Hello Word"
           docker-compose stop
+          mkdir ../backup
+          cp ./etc ../backup
+          cd ../backup
           ls
+        
