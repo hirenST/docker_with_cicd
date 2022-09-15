@@ -1,0 +1,19 @@
+version: '3.3'
+services:
+    db:
+        image: postgres:14
+        environment:
+            - POSTGRES_DB=postgres
+            - POSTGRES_PASSWORD=odoo
+            - POSTGRES_USER=odoo
+    odoo:
+        container_name: odoo
+        image: odoo:15.0
+        restart: always
+        volumes:
+            - ./addons-extra:/mnt/extra-addons
+            - ./etc/odoo:/etc/odoo
+        ports:
+            - "8069:8069"
+        depends_on:
+            - db
