@@ -12,7 +12,7 @@ jobs:
           echo "Hello Word"
           docker-compose stop
           mkdir ../backup
-          cp ./etc ../backup
+          cp -r ./etc ../backup
           cd ../backup
           ls
         
