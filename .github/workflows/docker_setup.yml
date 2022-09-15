@@ -10,4 +10,5 @@ jobs:
       - name: Run a multi-line script
         run: |
           echo "Hello Word"
-          docker-compose up
+          docker-compose stop
+          ls
