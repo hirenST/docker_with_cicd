@@ -15,6 +15,6 @@ jobs:
           cp -r ./etc ../backup
           git checkout main
           git pull
-          docker-compose restart
+          docker-compose up -d
           docker logs -f odoo
         
