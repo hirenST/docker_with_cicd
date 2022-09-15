@@ -13,6 +13,6 @@ jobs:
           docker-compose stop
           mkdir ../backup
           cp -r ./etc ../backup
-          git checkout master
+          git checkout main
           git pull
         
