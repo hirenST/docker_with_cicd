@@ -16,5 +16,6 @@ jobs:
           git checkout main
           git pull
           docker-compose up -d
-          docker logs -f odoo
+          docker exec -it odoo bash
+          pg_dump -C -h 127.0.0.1 -d webseeds_1 -p 5432 -U odoo -W > backup.sql
         
