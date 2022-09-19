@@ -10,4 +10,4 @@ jobs:
       - name: replace custom addons
         run: |
           cp -r ./etc /home/st11/Project/webseeds
-          docker-compose restart
+          docker-compose stop
