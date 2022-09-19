@@ -6,14 +6,11 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
-      
       - name: check out
       - uses: actions/checkout@v3
-      
       - name: replace custom addons
         env:
           Project_Dir_Path: ${{ secrets.PROJECT_DIR_PATH }}
         run: cp -r ./etc $Project_Dir_Path
-        
       - name: restart docker
         run: docker-compose restart
