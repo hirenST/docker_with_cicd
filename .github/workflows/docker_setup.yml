@@ -7,11 +7,10 @@ jobs:
     environment: webseed_production_env
     runs-on: self-hosted
     steps:
-      - name: check out
       - uses: actions/checkout@v3
-      - name: replace custom addons
+      - name: check out
         env:
           Project_Dir_Path: ${{ secrets.PROJECT_DIR_PATH }}
-        run: cp -r ./etc $Project_Dir_Path
-      - name: restart docker
-        run: docker-compose restart
+        run: | 
+          cp -r ./etc $Project_Dir_Path
+          docker-compose restart
