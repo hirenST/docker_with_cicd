@@ -11,7 +11,9 @@ jobs:
       - uses: actions/checkout@v3
       
       - name: replace custom addons
-        run: cp -r ./etc /home/st11/Project/webseeds
+        env:
+          Project_Dir_Path: ${{ secrets.PROJECT_DIR_PATH }}
+        run: cp -r ./etc $Project_Dir_Path
         
       - name: restart docker
         run: docker-compose restart
