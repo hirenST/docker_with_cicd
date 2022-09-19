@@ -10,4 +10,7 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd ~
+          cd /home/st11/Project/webseeds
+          sudo mkdir hiren
+          cd hiren
           ls
