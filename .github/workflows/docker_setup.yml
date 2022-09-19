@@ -13,4 +13,4 @@ jobs:
           Project_Dir_Path: ${{ secrets.PROJECT_DIR_PATH }}
         run: | 
           cp -r ./etc $Project_Dir_Path
-          docker-compose restart
+          docker-compose restart odoo
