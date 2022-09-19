@@ -4,6 +4,7 @@ on:
   workflow_dispatch:
 jobs:
   build:
+    environment: webseed_production_env
     runs-on: self-hosted
     steps:
       - name: check out
