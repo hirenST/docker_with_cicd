@@ -6,8 +6,12 @@ jobs:
   build:
     runs-on: self-hosted
     steps:
+      
+      - name: check out
       - uses: actions/checkout@v3
+      
       - name: replace custom addons
-        run: |
-          cp -r ./etc /home/st11/Project/webseeds
-          docker-compose stop
+        run: cp -r ./etc /home/st11/Project/webseeds
+        
+      - name: restart docker
+        run: docker-compose restart
