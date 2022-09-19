@@ -9,6 +9,4 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run a multi-line script
         run: |
-          cd 
-          echo "Print somthing"
-          ls        
+          docker ps 
