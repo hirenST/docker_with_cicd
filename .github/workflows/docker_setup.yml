@@ -15,3 +15,15 @@ jobs:
           cp -r ./etc $Project_Dir_Path
           cd $Project_Dir_Path
           docker-compose stop
+  build2:
+    environment: webseed_production_env
+    runs-on: self-hosted
+    steps:
+      - uses: actions/checkout@v3
+      - name: check out
+        env:
+          Project_Dir_Path: ${{ secrets.PROJECT_DIR_PATH }}
+        run: | 
+          cp -r ./etc $Project_Dir_Path
+          cd $Project_Dir_Path
+          docker-compose start
