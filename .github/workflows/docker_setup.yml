@@ -14,4 +14,4 @@ jobs:
         run: | 
           cp -r ./etc $Project_Dir_Path
           cd $Project_Dir_Path
-          docker-compose restart
+          docker-compose stop
