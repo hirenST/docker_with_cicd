@@ -18,7 +18,6 @@ jobs:
   build2:
     environment: webseed_production_env
     runs-on: self-hosted
-    needs: build
     steps:
       - uses: actions/checkout@v3
       - name: check out
