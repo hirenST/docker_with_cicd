@@ -25,6 +25,5 @@ jobs:
         env:
           Project_Dir_Path: ${{ secrets.PROJECT_DIR_PATH }}
         run: | 
-          cp -r ./etc $Project_Dir_Path
           cd $Project_Dir_Path
           docker-compose start
